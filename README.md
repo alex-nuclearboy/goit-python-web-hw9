@@ -1,3 +1,3 @@
 # Website scraping
 
-<http://quotes.toscrape.com>(Quotes to Scrape)
+[Quotes to Scrape](http://quotes.toscrape.com)
