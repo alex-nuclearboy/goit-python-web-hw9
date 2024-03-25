@@ -1,3 +1,3 @@
-# goit-python-web-hw9
+# Website scraping
 
-Beautiful soup
+<http://quotes.toscrape.com>(Quotes to Scrape)
