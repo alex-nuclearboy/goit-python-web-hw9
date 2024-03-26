@@ -4,6 +4,14 @@ import json
 
 
 def get_author_details(author_url):
+    """
+    Retrieves an author's detailed information from their page.
+
+    param author_url: The URL of the author's page.
+
+    return: A dictionary containing the author's full name, birth date, 
+            birth location, and description.
+    """
     response = requests.get(author_url)
     soup = BeautifulSoup(response.text, 'lxml')
     fullname = soup.find('h3', class_='author-title').text.strip()
@@ -22,6 +30,15 @@ def get_author_details(author_url):
 
 
 def scrape_quotes(soup, authors_urls):
+    """
+    Extracts quotes and their related data from a page.
+
+    param soup: The BeautifulSoup object representing the HTML page to scrape.
+    param authors_urls: A dictionary to keep track of author pages' URLs.
+
+    return: A list of dictionaries, each containing a quote 
+            and its associated author and tags.
+    """
     quotes = []
     for quote in soup.find_all('div', class_='quote'):
         text = quote.find('span', class_='text').text
@@ -43,6 +60,14 @@ def scrape_quotes(soup, authors_urls):
 
 
 def scrape_all_quotes(initial_url):
+    """
+    Manages the scraping of all quotes and authors' details from the site.
+
+    param initial_url: The starting URL of the website.
+
+    return: A tuple containing a list of all quotes 
+            and a list of all authors' details.
+    """
     quotes = []
     authors_urls = {}
     url = initial_url
@@ -66,6 +91,9 @@ def scrape_all_quotes(initial_url):
 
 
 def main():
+    """
+    Main function to run the scraping process and save data to JSON files.
+    """
     initial_url = 'https://quotes.toscrape.com/'
     quotes_data, authors_data = scrape_all_quotes(initial_url)
 
