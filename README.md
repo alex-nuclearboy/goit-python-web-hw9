@@ -24,9 +24,10 @@ git clone https://github.com/alex-nuclearboy/goit-python-web-hw9.git
 cd goit-python-web-hw9
 ```
 
-- **Activate the Poetry environment:**
+- **Activate the Poetry environment and install dependencies:**
 ```bash
 poetry shell
+poetry install
 ```
 #### Running the Scraper
 
