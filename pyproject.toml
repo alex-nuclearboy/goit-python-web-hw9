@@ -1,0 +1,20 @@
+[tool.poetry]
+name = "goit-python-web-hw9"
+version = "0.1.0"
+description = "Scraping of the site http://quotes.toscrape.com"
+authors = ["Alex Khreptak <alex.nuclearboy@gmail.com>"]
+license = "MIT"
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.10"
+beautifulsoup4 = "^4.12.3"
+requests = "^2.31.0"
+lxml = "^5.1.0"
+pymongo = {extras = ["srv", "tls"], version = "^4.6.2"}
+mongoengine = "^0.28.2"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
