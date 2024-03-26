@@ -10,10 +10,9 @@ db_name = config.get('DB', 'db_name')
 
 URI = (
     f'mongodb+srv://{mongodb_user}:{mongodb_pass}'
-    '@cluster0.eo7mc3z.mongodb.net/?retryWrites=true&'
+    '@cluster0.dtf8doi.mongodb.net/?retryWrites=true&'
     'w=majority&appName=Cluster0'
 )
-
 
 def create_connect():
     """
